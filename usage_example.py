@@ -22,11 +22,12 @@ noise = 1e-6
 beta_function='const'
 beta_const_val=2.5
 
+# In this example, we do not provide an initial dataset to perform an initial optimization of the kernel hyperparameters. This may lead the algorithm to stuck in local optima.
 optimizer = ContextualBayesianOptimization(all_actions_dict=discvars, contexts=contexts, kernel=kernel)
 
 utility = UtilityFunction(kind="ucb", beta_kind=beta_function, beta_const=beta_const_val)
 
-nIters = 200
+nIters = 150
 for i in range(nIters):
 
     print(i)
@@ -45,7 +46,12 @@ res = optimizer.res
 vReward = []
 for i in range(nIters):
     vReward.append(res[i]['reward'])
+
+plt.figure()
 plt.plot(vReward)
+plt.xlabel('Iterations')
+plt.ylabel('Reward')
+
 
 
 
