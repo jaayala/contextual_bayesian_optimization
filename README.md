@@ -11,7 +11,6 @@ If you use any code please cite the following:
   title={Bayesian Online Learning for Energy-Aware Resource Orchestration in Virtualized RANs},
   author={Ayala-Romero, Jose A and Garcia-Saavedra, Andres and Costa-Perez, Xavier and Iosifidis, George},
   booktitle={{IEEE} Conference on Computer Communications, {INFOCOM} 2021},
-  pages={4627--4638},
   year={2021}
 }
 ```
